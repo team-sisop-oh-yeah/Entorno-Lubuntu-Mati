@@ -7,8 +7,7 @@
 #include <stdlib.h>
 #include <string.h>
 
-int main()
-{
+int main() {
   int numero;
   numero = 3;
   numero++;
@@ -21,8 +20,7 @@ int main()
 
   t_list *mensajes;
   // es necesario la ruta absoluta para que lo entienda el debugger
-  char temp_file_path[] =
-    "/home/jelou/Documents/git/manu-cproject/project/modulo-1/";
+  char temp_file_path[100] = "/home/utnso/tp/manu-cproject/project/modulo-1/";
   // char temp_file_path[] = "/home/utnso/tp/project/modulo-1/";
 
   char temp_file[] = "logs/sample.txt"; // se creará en la raíz del proyecto
@@ -34,15 +32,11 @@ int main()
   list_add(mensajes, crear_mensaje_importante("holis"));
   list_add(mensajes, crear_mensaje_importante("que tal?"));
 
-  char *_get_texto(Mensaje * mensaje)
-  {
-    return mensaje->texto;
-  };
+  char *_get_texto(Mensaje * mensaje) { return mensaje->texto; };
 
   t_list *textos = list_map(mensajes, (void *)_get_texto);
 
-  for (int i = 0; i < list_size(textos); i++)
-  {
+  for (int i = 0; i < list_size(textos); i++) {
     log_info(logger, "%s", (char *)list_get(textos, i));
   }
 
@@ -53,8 +47,7 @@ int main()
   return 0;
 }
 
-Mensaje *crear_mensaje_importante(char *texto)
-{
+Mensaje *crear_mensaje_importante(char *texto) {
   Mensaje *mensaje = malloc(sizeof(Mensaje));
 
   mensaje->texto = strdup(texto);
@@ -63,16 +56,13 @@ Mensaje *crear_mensaje_importante(char *texto)
   return mensaje;
 }
 
-void mensaje_destroy(Mensaje *mensaje)
-{
+void mensaje_destroy(Mensaje *mensaje) {
   free(mensaje->texto);
   free(mensaje);
 }
 
-void imprimir_mensaje(Mensaje mensaje)
-{
-  if (mensaje.tipo == MENSAJE_IMPORTANTE)
-  {
+void imprimir_mensaje(Mensaje mensaje) {
+  if (mensaje.tipo == MENSAJE_IMPORTANTE) {
     printf("ALERTA!! ");
   }
 

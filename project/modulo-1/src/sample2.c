@@ -3,7 +3,4 @@
 #include <stdlib.h>
 #include <string.h>
 
-int sumar(int x, int y)
-{
-  return x + y;
-}
+int sumar(int x, int y) { return x + y; }

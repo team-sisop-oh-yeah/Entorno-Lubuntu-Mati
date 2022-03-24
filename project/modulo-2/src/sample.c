@@ -7,7 +7,8 @@
 
 int main() {
   t_list *publicaciones;
-  char temp_file[] = "/home/utnso/tp/manu-cproject/project/modulo-2/logs/"
+  char temp_file[] = "/home/mbeorlegui/Escritorio/Matias/so/manu/"
+                     "Entorno-Lubuntu-Mati/project/modulo-2/logs/"
                      "publicaciones.txt"; // se creará en la raíz del proyecto
   t_log *logger = log_create(temp_file, "TEST", true, LOG_LEVEL_INFO);
   publicaciones = list_create();

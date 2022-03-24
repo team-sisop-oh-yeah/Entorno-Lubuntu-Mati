@@ -20,7 +20,8 @@ int main() {
 
   t_list *mensajes;
   // es necesario la ruta absoluta para que lo entienda el debugger
-  char temp_file_path[100] = "/home/utnso/tp/manu-cproject/project/modulo-1/";
+  char temp_file_path[100] = "/home/mbeorlegui/Escritorio/Matias/so/manu/"
+                             "Entorno-Lubuntu-Mati/project/modulo-1/";
   // char temp_file_path[] = "/home/utnso/tp/project/modulo-1/";
 
   char temp_file[] = "logs/sample.txt"; // se creará en la raíz del proyecto
